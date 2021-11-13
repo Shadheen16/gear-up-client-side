@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import Logo from '../Logo/Logo';
 import useAuth from '../../../Hooks/useAuth'
-import { UserIcon, ViewGridIcon, ViewListIcon } from '@heroicons/react/solid'
+import { ViewGridIcon} from '@heroicons/react/solid'
 import './Navbar.css'
 
 const navigation = [

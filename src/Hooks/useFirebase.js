@@ -23,7 +23,15 @@ const useFirebase = () => {
         } else if (e.target.name === "password") {
             console.log(e.target.value);
             setPassword(e.target.value);
+        } else if (e.target.name === "password2") {
+            console.log(e.target.value);
+            const passwordMatch =e.target.value;
+            if (passwordMatch!==password){
+                setError('password does not match')
+            }
+            ;
         }
+
     };
 
     const logInUser = (e) => {
@@ -61,15 +69,18 @@ const useFirebase = () => {
         validatePassword();
 
         createUserWithEmailAndPassword(auth, email, password)
-            .then(res => {
-                const user = res.user;
-                setError('');
-                updateName();
-                setUser(user);
-            }
-            )
+        .then(res => {
+            const user = res.user;
+            setError('');
+            updateName();
+            setUser(user);
+        }
+        )
             .catch(error => setError(error.meassage))
-            .finally(() => setIsLoading(false));
+            .finally(() => {
+                updateName()
+                setIsLoading(false)
+            })
     }
 
     const updateName = () => {
@@ -83,7 +94,7 @@ const useFirebase = () => {
                 // ...
             }).catch((error) => {
                setError(error)
-            });
+            })
     }
 
 

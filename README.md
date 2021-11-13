@@ -1,6 +1,14 @@
-# Getting Started with Create React App
+#A website for online car parts seller
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live-demo-[Click here]( https://geary-82a11.web.app/).
+
+## About this app
+1. A full stack react app using mern stack\
+2. Used the power of tailwind for styling
+3. A beatiful landing page with a smooth animation on the navbar 
+4. Routing is powered by the latest version of react-router-dom@v6.0.2
+5. Used firebase authentication
+6. Used context api for managing state
 
 ## Available Scripts
 
@@ -68,4 +76,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# niche-website-client-side-Shadheen16
+# review-website-Shadheen16
