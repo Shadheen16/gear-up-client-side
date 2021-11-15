@@ -15,6 +15,12 @@ import PreLoader from './pages/Preloader/PreLoader';
 import React, { useState } from 'react';
 import AuthProvider from './Provider/AuthProvider';
 import ProductProvider from './Provider/ProductProvider';
+import ManageProducts from './pages/DashBoard/ManageProducts/ManageProducts';
+import ManageOrders from './pages/DashBoard/MangeOrders/ManageOrders';
+import ManageRoles from './pages/DashBoard/ManageRoles/ManageRoles';
+import MyOrders from './pages/DashBoard/MyOrders/MyOrders';
+import Order from './pages/Order/Order';
+import Payment from './pages/DashBoard/Payment/Payment';
 
 
 function App() {
@@ -34,8 +40,14 @@ function App() {
                   <Route path="/login" element={<Login />} />
                   <Route path="/register" element={<Register />} />
                   <Route path="/all-products" element={<Allproducts />} />
-                  {/* <Route path="/dashboard" element={<PrivateRoute><DashBoard /></PrivateRoute>} /> */}
-                  <Route path="/dashboard" element={<DashBoard />} />
+                  <Route path="/dashboard/*" element={<PrivateRoute><DashBoard /></PrivateRoute>}>
+                    <Route path="manage-products" element={<ManageProducts/>}/>
+                    <Route path="manage-orders" element={<ManageOrders/>}/>
+                    <Route path="my-orders" element={<MyOrders/>}/>
+                    <Route path="manage-roles" element={<ManageRoles/>}/>
+                    <Route path="payment" element={<Payment/>}/>
+                  </Route> 
+                  <Route path="/products/:productId" element={<PrivateRoute><Order/></PrivateRoute>}/>
                   <Route path="*" element={<NoMatch />} />
                 </Routes>
               </Router>

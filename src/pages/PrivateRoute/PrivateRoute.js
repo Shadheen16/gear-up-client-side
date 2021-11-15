@@ -1,13 +1,11 @@
 import React from 'react';
 import { Navigate, useLocation} from 'react-router';
-// import useAuth from '../../Hooks/useAuth';
+import useAuth from '../../Hooks/useAuth';
 
 const PrivateRoute = ({ children, ...rest }) => {
     const location = useLocation();
-    // const { user, isLoading } = useAuth();
-    // console.log(isLoading, user, children)
-    let isLoading =false;
-    let user =false;
+    const { user, isLoading } = useAuth();
+    console.log(isLoading, user, children)
 
     if (isLoading) {
         return <div className="flex w-screen min-h-screen justify center align-middle">
@@ -17,14 +15,7 @@ const PrivateRoute = ({ children, ...rest }) => {
         </div>
     };
 
-    return user ? children : <Navigate to={
-        {
-            pathname: "/login",
-            replace:true,
-            state :{ from: location }
-        }
-        
-    } />;
+    return user?.email ? children : <Navigate to="/login" state={ {from: location }}/>;
 };
 
 export default PrivateRoute;

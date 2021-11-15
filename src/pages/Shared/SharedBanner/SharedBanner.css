@@ -1,0 +1,7 @@
+#sharedBanner{
+    background-image: url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1032&q=80'), linear-gradient(to right,rgba(0, 0, 255, 0.527),rgba(255, 0, 0, 0.356));
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

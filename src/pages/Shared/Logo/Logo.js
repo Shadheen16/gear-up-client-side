@@ -2,8 +2,8 @@ import React from 'react';
 
 const Logo = () => {
     return (
-        <div>
-            logo
+        <div className="font-rubik font-extrabold text-[5vh] text-white">
+            Geary
         </div>
     );
 };

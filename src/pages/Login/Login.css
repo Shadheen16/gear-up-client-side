@@ -1,0 +1,7 @@
+#login{
+    background-image: url("../../Images/backgrounds/19420.jpg"), linear-gradient(to right, rgba(0, 0, 255, 0.658), rgba(255, 0, 0, 0.212));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    /* background-blend-mode: multiply; */
+}

@@ -1,5 +1,5 @@
 #banner{
-    background-image: url('../../../../Images/banner/banner.jpg'), linear-gradient(to right,rgba(0, 0, 255, 0.527),rgba(255, 0, 0, 0.356));
+    background-image: url('../../../../Images/banner/banner.jpg'), linear-gradient(to right,rgb(0, 0, 255),rgba(255, 0, 0, 0.247));
     background-position: right top;
     background-size:cover;
     background-blend-mode: multiply;
