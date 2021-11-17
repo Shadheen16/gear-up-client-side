@@ -21,9 +21,11 @@ import ManageRoles from './pages/DashBoard/ManageRoles/ManageRoles';
 import MyOrders from './pages/DashBoard/MyOrders/MyOrders';
 import Order from './pages/Order/Order';
 import Payment from './pages/DashBoard/Payment/Payment';
+import useProducts from './Hooks/useProducts';
 
 
 function App() {
+  const {products, setProducts} = useProducts()
   const [loading, setLoading] = useState(true);
   window.addEventListener('load', () => {
     setLoading(false)
@@ -33,7 +35,7 @@ function App() {
       <ProductProvider>
         <div className="App font-oswald">
           {
-            loading ? <PreLoader /> :
+            loading && !products.length ? <PreLoader /> :
               <Router>
                 <Routes>
                   <Route path="/" element={<Home />} />

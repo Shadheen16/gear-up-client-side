@@ -28,10 +28,10 @@ const MyOrders = () => {
                         <thead className="bg-gray-100 rounded-lg last-child:rounded-b-xl  flex text-clr-primary w-full">
                             <tr className="flex w-full border-b-2 mb-4">
                                 <th className="p-4"># Sl</th>
-                                <th className="p-4 w-1/4">Ordered Service</th>
-                                <th className="p-4 w-1/4">Orderer Name</th>
-                                <th className="p-4 w-1/4">Orderer E-mail</th>
-                                <th className="p-4 w-1/4">Orderer Phone</th>
+                                <th className="p-4 w-1/4">Product</th>
+                                <th className="p-4 w-1/4">Customer Name</th>
+                                <th className="p-4 w-1/4">Customer E-mail</th>
+                                <th className="p-4 w-1/4">Customer Phone</th>
                                 <th className="p-4 w-1/4">Status</th>
                                 <th className="p-4 w-1/4">Action</th>
                             </tr>
@@ -44,7 +44,7 @@ const MyOrders = () => {
                                     key={MyOrders._id}
                                     className="flex w-full border-b-2 text-center">
                                     <td className="p-4">{myOrders.indexOf(myOrder) + 1}</td>
-                                    <td className="p-4 w-1/4">{myOrder.service_name}</td>
+                                    <td className="p-4 w-1/4">{myOrder.product_name}</td>
                                     <td className="p-4 w-1/4">{myOrder.name}</td>
                                     <td className="p-4 w-1/4">{myOrder.email}</td>
                                     <td className="p-4 w-1/4">{myOrder.phone}</td>

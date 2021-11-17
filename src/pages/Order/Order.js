@@ -6,6 +6,7 @@ import useAuth from '../../Hooks/useAuth';
 import Navbar from '../Shared/Navbar/Navbar';
 import SharedBanner from '../Shared/SharedBanner/SharedBanner';
 import Footer from '../Shared/Footer/Footer';
+import PreLoader from '../Preloader/PreLoader';
 
 
 
@@ -13,6 +14,7 @@ const Order = () => {
     const { productId } = useParams();
     console.log(productId)
     const [product, setProduct] = useState([]);
+    const [loading, setLoading] = useState(true);
     const { user } = useAuth();
 
     const { register, handleSubmit, control, reset } = useForm();
@@ -20,7 +22,10 @@ const Order = () => {
     //get single product 
     useEffect(() => {
         axios.get(`https://stark-bayou-55220.herokuapp.com/products/${productId}`)
-            .then(res => setProduct(res.data))
+            .then(res => {
+                setProduct(res.data)
+                setLoading(false)
+            })
     }, [productId]);
 
     console.log("order:" + productId);
@@ -41,7 +46,9 @@ const Order = () => {
     }
     return (
         <div className="">
-            <Navbar />
+            {
+                loading ? <PreLoader/> : <div>
+                       <Navbar />
             <SharedBanner
                 bannerText="Item Details"
             />
@@ -91,6 +98,8 @@ const Order = () => {
                 </div>
             </main>
             <Footer/>
+                </div>
+            }
         </div>
     );
 };
