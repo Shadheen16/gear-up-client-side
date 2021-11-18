@@ -11,7 +11,7 @@ export default function AddProducts() {
 
     const onSubmit = data => {
         console.log(data);
-        axios.post('https://stark-bayou-55220.herokuapp.com/products',data)
+        axios.post('https://mysterious-fjord-26460.herokuapp.com/products',data)
             .then(res => {
                 console.log(res)
                 if (res.status === 200) {

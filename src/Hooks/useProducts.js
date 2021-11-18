@@ -5,7 +5,7 @@ const useProducts = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() =>{
-        axios.get('https://stark-bayou-55220.herokuapp.com/products')
+        axios.get('https://mysterious-fjord-26460.herokuapp.com/products')
         .then(res => setProducts(res.data))
     } ,[])
 

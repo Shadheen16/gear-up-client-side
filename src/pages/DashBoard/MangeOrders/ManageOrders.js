@@ -12,7 +12,7 @@ const MyOrders = () => {
     // get orders by eemail
 
     useEffect(() => {
-     axios.get('https://stark-bayou-55220.herokuapp.com/orders')
+     axios.get('https://mysterious-fjord-26460.herokuapp.com/orders')
     .then(res=> {
         console.log('my order', res.data)
         setMyOrders(res.data)});

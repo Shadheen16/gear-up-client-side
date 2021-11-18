@@ -15,7 +15,7 @@ const MakeAdmin = () => {
         e.preventDefault()
         console.log('making admin', email)
         const user = { email };
-        fetch('https://stark-bayou-55220.herokuapp.com/users/admin', {
+        fetch('https://mysterious-fjord-26460.herokuapp.com/users/admin', {
             method: 'PUT',
             headers: {
                 'authorization': `Bearer ${token}`,

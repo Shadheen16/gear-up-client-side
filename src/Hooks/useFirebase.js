@@ -94,7 +94,7 @@ const useFirebase = () => {
 
 // admin check function
     useEffect(() => {
-        fetch(`https://stark-bayou-55220.herokuapp.com/users/${user.email}`)
+        fetch(`https://mysterious-fjord-26460.herokuapp.com/users/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user.email])
@@ -115,7 +115,7 @@ const useFirebase = () => {
    //save user to database
    const saveUser = (email, displayName, method) => {
     const user = { email, displayName };
-    fetch('https://stark-bayou-55220.herokuapp.com/users', {
+    fetch('https://mysterious-fjord-26460.herokuapp.com/users', {
         method: method,
         headers: {
             'content-type': 'application/json'

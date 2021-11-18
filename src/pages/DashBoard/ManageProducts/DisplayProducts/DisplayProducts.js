@@ -11,7 +11,7 @@ const DisplayProducts = (props) => {
     const handleDelete = async (id) => {
         console.log(id)
         window.confirm("Are you sure");
-        await axios.delete(`https://stark-bayou-55220.herokuapp.com/products/${id}`)
+        await axios.delete(`https://mysterious-fjord-26460.herokuapp.com/products/${id}`)
             .then(res => {
                 if (res.status === 200) {
                     alert("Deleted Successfully")

@@ -21,7 +21,7 @@ const Order = () => {
 
     //get single product 
     useEffect(() => {
-        axios.get(`https://stark-bayou-55220.herokuapp.com/products/${productId}`)
+        axios.get(`https://mysterious-fjord-26460.herokuapp.com/products/${productId}`)
             .then(res => {
                 setProduct(res.data)
                 setLoading(false)
@@ -34,7 +34,7 @@ const Order = () => {
     const onSubmit = (data) => {
         data.product_name = product.title;
         data.product_id = product._id;
-        axios.post('https://stark-bayou-55220.herokuapp.com/orders', data)
+        axios.post('https://mysterious-fjord-26460.herokuapp.com/orders', data)
             .then(res => {
                 console.log(res)
                 if (res.status === 200) {
